@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Manager</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modern-ui-improvements.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="app-bar">
+            <div class="app-bar-top">
+                <div class="app-icon"><i class="fas fa-address-book"></i></div>
+                <div>
+                    <h1>Contacts</h1>
+                    <p>All saved contacts in one place</p>
+                </div>
+            </div>
+            <div class="header-meta">
+                <span id="totalContacts">0</span> contacts
+                <div class="header-actions">
+                    <span id="usernameDisplay"></span>
+                    <button type="button" id="logoutBtn" class="btn-link">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="search-bar">
+                <div class="search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="searchInput" placeholder="Search contacts...">
+                </div>
+            </div>
+            <div class="add-button-container">
+                <button type="button" id="addContactBtn" class="add-new-contact-btn">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+
+            <div class="contacts-list">
+                <div id="contactsContainer">
+                    <div class="empty-state">
+                        <i class="fas fa-users"></i>
+                        <p>No contacts yet.</p>
+                        <button type="button" id="emptyStateAddBtn" class="add-new-contact-btn" style="font-size: 1.1rem; padding: 15px 30px;">
+                            <i class="fas fa-plus"></i> Add Your First Contact
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
