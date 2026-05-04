@@ -320,34 +320,29 @@ class ContactManager {
         }
 
         container.innerHTML = this.filteredContacts.map(contact => `
-            <div class="contact-card" data-id="${contact.id}">
+            <div class="contact-card" data-id="${contact.id}" onclick="window.location.href='view.html?id=${contact.id}'" style="cursor: pointer;">
                 <div class="avatar">${this.escapeHtml(contact.name.charAt(0).toUpperCase())}</div>
                 <div class="contact-info">
                     <div class="contact-heading">
                         <h3 class="contact-name">
                             ${this.escapeHtml(contact.name)}
-                            <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                            ${contact.nickname ? `<span class="nickname-badge">${this.escapeHtml(contact.nickname)}</span>` : ''}
                         </h3>
                         <div class="contact-actions">
-                            <button type="button" class="btn-sm btn-edit" onclick="event.stopPropagation(); window.app.editContact(${contact.id});" title="Edit contact">
+                            <button type="button" class="btn-sm btn-edit" onclick="event.stopPropagation(); window.app.editContact(${contact.id}); window.event.stopPropagation();" title="Edit contact">
                                 <i class="fas fa-edit"></i>
                             </button>
-                            <button type="button" class="btn-sm btn-delete" onclick="event.stopPropagation(); window.app.deleteContact(${contact.id});" title="Delete contact">
+                            <button type="button" class="btn-sm btn-delete" onclick="event.stopPropagation(); window.app.deleteContact(${contact.id}); window.event.stopPropagation();" title="Delete contact">
                                 <i class="fas fa-trash-alt"></i>
                             </button>
+                            <a href="view.html?id=${contact.id}" class="btn-sm btn-view" title="View details" style="background: #3b82f6; color: white;">
+                                <i class="fas fa-eye"></i>
+                            </a>
                         </div>
                     </div>
-                    ${contact.nickname ? `<p class="subtitle"><i class="fas fa-user-tag"></i> ${this.escapeHtml(contact.nickname)}</p>` : ''}
-                    <div class="contact-details">
+                    <div class="contact-preview">
                         <p><i class="fas fa-envelope"></i> ${this.escapeHtml(contact.email)}</p>
                         <p><i class="fas fa-phone"></i> ${this.escapeHtml(contact.phone)}</p>
-                        ${contact.company ? `<p><i class="fas fa-building"></i> ${this.escapeHtml(contact.company)}</p>` : ''}
-                        ${contact.address ? `<p><i class="fas fa-map-marker-alt"></i> ${this.escapeHtml(contact.address)}</p>` : ''}
-                        ${contact.notes ? `<p><i class="fas fa-sticky-note"></i> ${this.escapeHtml(contact.notes)}</p>` : ''}
-                        <small>
-                            <i class="fas fa-clock"></i> 
-                            ${new Date(contact.created_at).toLocaleDateString()}
-                        </small>
                     </div>
                 </div>
             </div>

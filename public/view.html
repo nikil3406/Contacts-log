@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Contact</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="modern-ui-improvements.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="page-header">
+            <div class="page-header-top">
+                <button type="button" id="backBtn" class="btn-link">
+                    <i class="fas fa-arrow-left"></i>
+                    Contacts
+                </button>
+                <div class="page-header-title">
+                    <h1 id="contactName"><i class="fas fa-user"></i> Contact Details</h1>
+                    <p id="contactSubtitle">View all details for this contact</p>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content single-column">
+            <div class="form-container">
+                <div class="contact-header" id="contactHeader">
+                    <div class="contact-avatar-large"></div>
+                    <h2 id="contactNameHeader" class="contact-header-name"></h2>
+                    <p id="nicknameHeader" class="contact-header-nickname"></p>
+                </div>
+                <div id="contactDetails">
+                    <div class="detail-grid">
+                        <div class="detail-group">
+                            <label><i class="fas fa-user"></i> Full Name</label>
+                            <div class="detail-value primary" id="name"></div>
+                        </div>
+                        <div class="detail-group">
+                            <label><i class="fas fa-user-tag"></i> Nickname</label>
+                            <div class="detail-value" id="nickname"></div>
+                        </div>
+                    </div>
+                    <div class="detail-grid">
+                        <div class="detail-group">
+                            <label><i class="fas fa-envelope"></i> Email</label>
+                            <div class="detail-value clickable" id="email"></div>
+                        </div>
+                        <div class="detail-group">
+                            <label><i class="fas fa-phone"></i> Phone</label>
+                            <div class="detail-value clickable" id="phone"></div>
+                        </div>
+                    </div>
+                    <div class="detail-grid">
+                        <div class="detail-group">
+                            <label><i class="fas fa-building"></i> Company</label>
+                            <div class="detail-value" id="company"></div>
+                        </div>
+                        <div class="detail-group">
+                            <label><i class="fas fa-map-marker-alt"></i> Address</label>
+                            <div class="detail-value" id="address"></div>
+                        </div>
+                    </div>
+                    <div class="detail-grid">
+                        <div class="detail-group">
+                            <label><i class="fas fa-sticky-note"></i> Notes</label>
+                            <div class="detail-value" id="notes"></div>
+                        </div>
+                        <div class="detail-group">
+                            <label><i class="fas fa-calendar"></i> Created</label>
+                            <div class="detail-value" id="created"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="editBtn" class="btn-primary">
+                        <i class="fas fa-edit"></i> Edit Contact
+                    </button>
+                    <button type="button" id="deleteBtn" class="btn-sm btn-delete">
+                        <i class="fas fa-trash-alt"></i> Delete
+                    </button>
+                </div>
+                <div id="message" class="form-message hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="view.js"></script>
+</body>
+</html>
+

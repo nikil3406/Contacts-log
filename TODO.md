@@ -1,30 +1,18 @@
-# Contact Manager UI Update: Hide Form Initially, Add Toggle Button
+# Button Changes Implementation Plan
 
-**Status:** In progress
+## Steps:
+1. [x] Create TODO.md 
+2. [x] Update public/styles.css with new button colors/classes (green primary, orange links, purple FAB)
+3. [x] Update public/modern-ui-improvements.css with enhanced hovers/transitions for new colors
+4. [x] Verify changes by opening public/login.html in browser
+5. [x] Update TODO.md with completion
+6. [x] Complete task
 
-## Completed Steps
-- [x] 1. Update public/index.html
-- [x] 2. Update public/script.js
-- [x] 3. Update public/styles.css
+## Details:
+- Primary buttons (.btn-primary): #10b981 green
+- Link buttons (.btn-link): #f59e0b orange outline
+- Add FAB (.add-new-contact-btn): #8b5cf6 purple
+- Small buttons (.btn-sm): refined
 
-## Remaining Steps
-**All edits complete. Test the app by running the server and opening http://localhost:3000 in browser (assuming server.js runs on port 3000).
-
-Key changes:
-- Form initially hidden behind "Add New Contact" button
-- Smooth show/hide transitions
-- Toggle works for add, edit, cancel/save
-- Empty state has prominent add button
-- Responsive design maintained
-
-To test:
-1. `node server.js`
-2. Open http://localhost:3000
-3. Verify form hidden initially
-4. Click add button → form appears
-5. Add contact → form hides after save
-6. Edit contact → form shows with data
-7. Check empty state button
-8. Test mobile view
-
+✅ All buttons updated: Login/Register now green, back/logout orange, add purple, edit green, delete red. Enhanced hovers/shadows.
 

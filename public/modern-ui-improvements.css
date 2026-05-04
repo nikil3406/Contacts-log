@@ -1,0 +1,68 @@
+/* Modern UI Improvements - Additional styling for better visual experience */
+
+/* Enhanced focus states */
+.form-group:focus-within,
+input:focus,
+textarea:focus {
+    position: relative;
+}
+
+.form-group input:focus + label,
+.form-group textarea:focus + label {
+    color: #4f46e5;
+}
+
+/* Better button hover effects */
+.btn-primary:hover {
+    background: #059669;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Card hover improvements */
+.contact-card:hover {
+    border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+/* Smooth transitions */
+* {
+    transition: all 0.2s ease;
+}
+
+/* Notification improvements - already in JS but enhanced */
+.notification {
+    backdrop-filter: blur(10px);
+}
+
+/* Avatar enhancements */
+.avatar {
+    font-size: 1.2rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+/* Empty state improvements */
+.empty-state {
+    border: 2px dashed #e5e7eb;
+}
+
+/* Responsive improvements */
+@media (max-width: 480px) {
+    .container {
+        padding: 12px;
+    }
+    
+    .app-bar {
+        padding: 16px;
+    }
+}
+
+/* Loading states for forms */
+.form-group.loading input,
+.form-group.loading textarea {
+    background: #f8fafc url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"%236b7280\" stroke-width=\"2\"><circle cx=\"12\" cy=\"12\" r=\"10\"/></svg>') no-repeat center right 16px;
+    background-size: 16px;
+}
